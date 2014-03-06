@@ -10,12 +10,8 @@ namespace Mpwar;
  *
  * @package Mpwar
  */
-class RecomendadorExternoBlueknow
+class RecomendadorExternoBlueknow extends RecomendadorExterno
 {
-	/**
-	 * @var bool indica si el sistema externo ha sido inicializado o no. Para poder obtener recomendaciones, debe ser true.
-	 */
-	private $sistema_externo_inicializado = false;
 
 	/**
 	 * Método fake.
@@ -23,7 +19,7 @@ class RecomendadorExternoBlueknow
 	 * Simula la inicialización del sistema de recomendaciones.
 	 * Común a todo sistema de recomendación externo.
 	 */
-	public function inicializarSistemaExternoBlueknow()
+	public function inicializarSistemaExterno()
 	{
 		$this->sistema_externo_inicializado = true;
 	}
@@ -38,7 +34,7 @@ class RecomendadorExternoBlueknow
 	 *
 	 * @return array de strings con los nombres de las canciones a recomendar
 	 */
-	public function obtenerRecomendacionesExternasBlueknow( $nombre_cancion_base )
+	public function obtenerRecomendaciones( $nombre_cancion_base )
 	{
 		if ( !$this->sistema_externo_inicializado )
 		{

@@ -10,12 +10,9 @@ namespace Mpwar;
  *
  * @package Mpwar
  */
-class RecomendadorExternoRedknow
+class RecomendadorExternoRedknow extends RecomendadorExterno
 {
-	/**
-	 * @var bool indica si el sistema externo ha sido inicializado o no. Para poder obtener recomendaciones, debe ser true.
-	 */
-	private $sistema_externo_inicializado = false;
+
 
 	/**
 	 * Método fake.
@@ -23,7 +20,7 @@ class RecomendadorExternoRedknow
 	 * Simula la inicialización del sistema de recomendaciones.
 	 * Común a todo sistema de recomendación externo.
 	 */
-	public function inicializarSistemaExternoRedknow()
+	public function inicializarSistemaExterno()
 	{
 		$this->sistema_externo_inicializado = true;
 	}
@@ -38,7 +35,7 @@ class RecomendadorExternoRedknow
 	 *
 	 * @throws \RuntimeException En caso de intentar obtener recomendaciones sin haber inicializado previamente el sistema (operación necesaria al tratarse de un sistema de recomendaciones externo).
 	 */
-	public function obtenerRecomendacionesExternasRedknow( $nombre_cancion_base )
+	public function obtenerRecomendaciones( $nombre_cancion_base )
 	{
 		if ( !$this->sistema_externo_inicializado )
 		{
