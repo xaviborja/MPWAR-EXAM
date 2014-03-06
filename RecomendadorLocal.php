@@ -10,7 +10,7 @@ namespace Mpwar;
  *
  * @package Mpwar
  */
-class RecomendadorLocal
+class RecomendadorLocal implements RecomendadorInterface
 {
 	/**
 	 * Método fake.
@@ -20,7 +20,7 @@ class RecomendadorLocal
 	 * @param string $nombre_cancion_base
 	 * @return array
 	 */
-	public function obtenerRecomendacionesLocales( $nombre_cancion_base )
+	public function obtenerRecomendaciones( $nombre_cancion_base )
 	{
 		return array(
 				'Se ven venir (quítate la venda)',
