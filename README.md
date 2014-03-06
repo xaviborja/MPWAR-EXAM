@@ -27,3 +27,4 @@ Ejercicios
 
 * Mejora la modularidad de la clase ReproductorMusica aplicando el principio Open/Close.
 * Ahora la clase ReproductorMusica estaría acoplada con las 3 clases de gestión de recomendaciones. Invierte esa dependencia.
+* Haz el diagrama de clases del dominio resultante tras aplicar las modificaciones.
