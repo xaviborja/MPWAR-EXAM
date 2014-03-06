@@ -22,5 +22,7 @@ abstract class RecomendadorExterno implements RecomendadorInterface
         $this->inicializarSistemaExterno();
     }
 
+    abstract public function inicializarSistemaExterno();
+
     abstract public function obtenerRecomendaciones( $recomendaciones );
 }
